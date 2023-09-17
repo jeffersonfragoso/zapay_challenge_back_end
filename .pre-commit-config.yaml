@@ -1,0 +1,15 @@
+repos:
+-   repo: https://github.com/pycqa/flake8
+    rev: 6.1.0
+    hooks:
+    - id: flake8
+      stages: [commit]
+      entry: flake8 .
+-   repo: local
+    hooks:
+      - id: dependencies
+        name: dependencies
+        entry: git add pyproject.toml poetry.lock
+        language: system
+        pass_filenames: false
+        stages: [commit]
