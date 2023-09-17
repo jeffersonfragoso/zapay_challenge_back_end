@@ -4,4 +4,4 @@ repos:
     hooks:
     - id: flake8
       stages: [commit]
-      entry: flake8 .
+      entry: flake8 ./src
