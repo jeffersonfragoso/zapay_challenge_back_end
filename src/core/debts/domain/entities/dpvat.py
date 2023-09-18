@@ -31,7 +31,7 @@ class DPVAT:
 
     def build_description(self):
         if not self.description:
-            self._set("title", f"DPVAT {self.year}")
+            self._set("description", f"DPVAT {self.year}")
 
     @classmethod
     def get_field(cls, entity_field: str) -> Field:
