@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ConsultaLicenciamento",
+  "type": "object",
+  "properties": {
+    "Servico":{
+      "type": "string"
+    },
+    "Veiculo":{
+      "type": "object",
+      "properties": {
+        "UF": {"type": "string"},
+        "Placa": {"type": "string"},
+        "CPFCNPJ": {"type": "string"},
+        "Renavam": {"type": "string"},
+        "Proprietario": {"type": "string"}
+      }
+    },
+    "Exercicio":{
+      "type": "number"
+    },
+    "TaxaLicenciamento":{
+      "type": "number"
+    }
+  },
+  "required": ["Servico", "Veiculo", "Exercicio", "TaxaLicenciamento"]
+}
