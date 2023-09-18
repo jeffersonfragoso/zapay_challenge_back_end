@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ConsultaMultas",
+  "type": "object",
+  "properties": {
+    "Multas": {
+      "type": "object",
+      "properties": {
+        "Multa": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "AIIP": {"type": "string"},
+              "Guia": {"type": "number"},
+              "Valor": {"type": "number"},
+              "DescricaoEnquadramento": {"type": "string"}
+            }
+          }
+        }
+      }
+    },
+    "Servico":{
+      "type": "string"
+    },
+    "Veiculo":{
+      "type": "object",
+      "properties": {
+        "UF": {"type": "string"},
+        "Placa": {"type": "string"},
+        "CPFCNPJ": {"type": "string"},
+        "Renavam": {"type": "string"},
+        "Proprietario": {"type": "string"}
+      }
+    }
+  },
+  "required": ["Multas", "Servico", "Veiculo"]
+}

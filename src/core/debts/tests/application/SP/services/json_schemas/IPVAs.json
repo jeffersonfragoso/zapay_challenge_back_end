@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ConsultaIPVA",
+  "type": "object",
+  "properties": {
+    "IPVAs": {
+      "type": "object",
+      "properties": {
+        "IPVA": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "Cota": {"type": "number"},
+              "Valor": {"type": "number"},
+              "Exercicio": {"type": "number"}
+            }
+          }
+        }
+      }
+    },
+    "Servico":{
+      "type": "string"
+    },
+    "Veiculo":{
+      "type": "object",
+      "properties": {
+        "UF": {"type": "string"},
+        "Placa": {"type": "string"},
+        "CPFCNPJ": {"type": "string"},
+        "Renavam": {"type": "string"},
+        "Proprietario": {"type": "string"}
+      }
+    }
+  },
+  "required": ["IPVAs", "Servico", "Veiculo"]
+}
+
