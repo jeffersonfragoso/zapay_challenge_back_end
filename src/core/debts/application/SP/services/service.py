@@ -4,7 +4,7 @@ from typing import Dict
 from core.debts.application.SP.services.api import API
 
 
-@dataclass(kw_only=True, slots=True)
+@dataclass(kw_only=True)
 class SPService:
     """
     Conecta com o webservice do Detran-SP.

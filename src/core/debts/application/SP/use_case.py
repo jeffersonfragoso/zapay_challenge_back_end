@@ -12,8 +12,8 @@ from core.debts.application.SP.services import SPParser, SPService
 
 @dataclass(kw_only=True, frozen=True, slots=True)
 class SearchcDebtsUseCase:
-    service_parser_SP: SPParser
     service_detran_SP: SPService
+    service_parser_SP: SPParser
 
     def execute(
         self, input_param: SearchDebtsInput

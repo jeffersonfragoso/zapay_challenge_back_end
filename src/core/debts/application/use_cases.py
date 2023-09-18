@@ -20,7 +20,13 @@ from core.debts.domain.entities import DPVAT, IPVA, Licenciamento, Multa
 @dataclass(slots=True, frozen=True)
 class CreateMultaUseCase:
     def execute(self, input_param: MultaInput) -> MultaOutput:
+        # cria entidade de dominio
         multa = Multa(**asdict(input_param))
+
+        # aplica regras de negócio
+        multa.amount_to_float()
+
+        # retorna um output conforme necessidade do caso de uso
         return MultaOutPutMapper.to_output(multa)
 
 
@@ -32,6 +38,7 @@ class CreateIPVAUseCase:
 
         # aplica regras de negócio
         ipva.build_title()
+        ipva.amount_to_float()
         ipva.set_description()
         ipva.set_installment()
 

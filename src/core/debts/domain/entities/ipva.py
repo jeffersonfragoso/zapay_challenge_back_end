@@ -32,6 +32,9 @@ class IPVA:
         builded_title = f"IPVA - Cota {value_cota}"
         self._set("title", builded_title)
 
+    def amount_to_float(self):
+        self._set("amount", (self.amount / 100))
+
     def set_description(self):
         self._set("description", f"IPVA {self.year}")
 
