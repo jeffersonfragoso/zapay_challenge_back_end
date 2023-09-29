@@ -1,0 +1,9 @@
+.dockerignore
+Dockerfile
+docker-compose.yml
+README.md
+.pre-commit-config.yaml
+.git*
+.pytest_cache
+.flake8
+.env*
